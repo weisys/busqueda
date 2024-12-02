@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de búsqueda</title>
+</head>
+<body>
+    <h1>Resultados para "{{ query }}"</h1>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado["columna"] }}</li>
+        {% else %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Volver</a>
+</body>
+</html>
